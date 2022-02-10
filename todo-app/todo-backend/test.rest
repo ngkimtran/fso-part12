@@ -9,5 +9,20 @@ Content-Type: application/json
 
 {
     "text": "Write code",
-    "done": true
+    "done": false
 }
+
+###
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "text": "Commit code",
+    "done": false
+}
+
+###
+DELETE http://localhost:3000/todos/620524a3066abe41303a4a11
+
+###
+GET http://localhost:3000/statistics

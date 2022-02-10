@@ -1,0 +1,9 @@
+docker container ls
+docker exec -it bc73 bash
+redis-cli
+KEYS *
+GET added_todos
+SET added_todos 9001
+GET added_todos
+DEL added_todos
+GET added_todos
