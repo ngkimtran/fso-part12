@@ -1,0 +1,13 @@
+GET http://localhost:3000/todos
+
+###
+GET http://localhost:3000/todos/6205029ad723fa2711614758
+
+###
+PUT http://localhost:3000/todos/6205029ad723fa2711614758
+Content-Type: application/json
+
+{
+    "text": "Write code",
+    "done": true
+}
