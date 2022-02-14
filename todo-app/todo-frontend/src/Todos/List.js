@@ -4,10 +4,12 @@ import Todo from './Todo';
 const TodoList = ({ todos, deleteTodo, completeTodo }) => {
   const onClickDelete = (todo) => () => {
     deleteTodo(todo);
+    console.log('a');
   };
 
   const onClickComplete = (todo) => () => {
     completeTodo(todo);
+    console.log('a');
   };
 
   return (

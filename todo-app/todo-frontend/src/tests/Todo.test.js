@@ -16,8 +16,8 @@ describe('A Todo component', () => {
     component = render(
       <Todo
         todo={todo}
-        onClickDelete={deleteHandler}
-        onClickComplete={completeHandler}
+        onClickDelete={() => deleteHandler}
+        onClickComplete={() => completeHandler}
       />
     );
   });
@@ -32,19 +32,11 @@ describe('A Todo component', () => {
     const button = component.getByText('Set as done');
     fireEvent.click(button);
     expect(completeHandler).toHaveBeenCalledTimes(1);
-    expect(completeHandler.mock.calls[0][0]).toEqual({
-      text: 'Testing todo',
-      done: false,
-    });
   });
 
   test('can delete todo', () => {
     const button = component.getByText('Delete');
     fireEvent.click(button);
     expect(deleteHandler).toHaveBeenCalledTimes(1);
-    expect(deleteHandler.mock.calls[0][0]).toEqual({
-      text: 'Testing todo',
-      done: false,
-    });
   });
 });
