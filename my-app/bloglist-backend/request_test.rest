@@ -1,0 +1,59 @@
+#blogs
+
+POST http://localhost:3003/api/blogs/61ab45fb13bb7519e9ce6e0e/comments
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxOTNhZDhhNjFmZGU0ODJhZDRkMWIyOSIsImlhdCI6MTYzODYxNDUxM30._apyPpMreWLKzN3cfmm1rpkyj85g3XXEX5wCrzs85-0
+
+{
+    "comment" : "a must read for every developer"
+}
+
+###
+GET http://localhost:3003/api/blogs/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxOTNhZDhhNjFmZGU0ODJhZDRkMWIyOSIsImlhdCI6MTYzODEyMjE2NH0.wXJQB3AikUAmQc4189KGq8P1_mmDWvwFf1LUVA39jBw
+
+###
+GET http://localhost:3003/api/blogs/6193a5c5e844f64a04b1477b
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxOTNhZDhhNjFmZGU0ODJhZDRkMWIyOSIsImlhdCI6MTYzNzI0MjMzMCwiZXhwIjoxNjM3MjQ1OTMwfQ.ZLnuDdMeumLLJ-buiX-W_w6-hWcKzpJ_WMOvJ7Z7x8M
+
+###
+DELETE http://localhost:3003/api/blogs/61ab461713bb7519e9ce6e15
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxOTNhZDhhNjFmZGU0ODJhZDRkMWIyOSIsImlhdCI6MTYzODYxNDUxM30._apyPpMreWLKzN3cfmm1rpkyj85g3XXEX5wCrzs85-0
+
+###
+PUT http://localhost:3003/api/blogs/6193a5c5e844f64a04b1477b
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxOTNhZDhhNjFmZGU0ODJhZDRkMWIyOSIsImlhdCI6MTYzNzI0MjMzMCwiZXhwIjoxNjM3MjQ1OTMwfQ.ZLnuDdMeumLLJ-buiX-W_w6-hWcKzpJ_WMOvJ7Z7x8M
+
+{
+    "author": "Robert C. Martin"
+}
+
+
+# users
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+    "username": "kim",
+    "name": "kim",
+    "password": "kim"
+}
+
+###
+GET http://localhost:3003/api/users/
+
+
+# login
+
+###
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "test"
+}
+
